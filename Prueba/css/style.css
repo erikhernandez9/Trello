@@ -1,0 +1,16 @@
+body {
+    background-image: url("../img/fondo.jpg") !important;
+}
+.list-container {
+    overflow-x:auto;
+    white-space: nowrap;
+}
+
+.contenido {
+    overflow-x:auto;
+    white-space:normal;
+}
+
+.oscuro {
+    background-color: bisque;
+}
