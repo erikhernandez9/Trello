@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <title>Trello</title>
+  <link rel="icon" href="img/trello_logo.png" type="image/x-icon" />
+  <title>Titulo proyecto | Trello</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="js/program.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -16,33 +16,42 @@
 
 </head>
 
-<body>
-  <nav class="navbar navbar-light bg-light">
+<body onload="setInitialHeight()">
+  <nav class="navbar navbar-expand-lg fondo-navbar">
     <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1">Trello</span>
+      <img src="img/Trello_logo.gif" class="mx-3" width="100px">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="navbar-brand active text-light" aria-current="page" href="#">| Titulo proyecto</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
-  <div class="container-fluid">
+  <div class="container-fluid pt-3 ps-3 pe-0">
     <div id="contenedorCol" class="d-flex align-items-start list-container">
-      <div class="col-6 bg-dark mx-3 px-3 py-3 rounded-3 contenido" style="width: 18em;">
-        <h5 class="text-light">Titulo ejemplo</h5>
+      <div class="col-6 me-3 px-3 py-3 rounded-4 contenido fondo-col" style="width: 18em;">
+        <input type="text" class="sinborde h5 text-light" value="Inserte titulo">
         <div id="div-0" class="row justify-content-center px-2">
-          <div class="card bg-dark bg-gradient text-light mb-3 mt-2 px-0">
-            <img src="img/imagen1.jpg" class="card-img-top" alt="...">
+          <div class="card bg-dark text-light mb-2 px-0 redondeado">
+            <div class="etiqueta"></div>
             <div class="card-body">
-              <h6 class="card-title">Card title</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <textarea class="sinborde-textarea" placeholder="Escribe algo..." oninput="adjustTextareaHeight(this)"></textarea>
             </div>
           </div>
         </div>
         <div class="row align-items-end px-2">
-          <a href="#" onclick="agregar(`0`)" class="btn btn-light h-50">+</a>
+          <button class="boton" name="button" onclick="agregar(`0`)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+          </svg> Añada una tarjeta</button>
         </div>
       </div>
-      <div id="lastCol" class="col-6 bg-dark mx-3 px-3 py-3 rounded-3 contenido" style="width: 18em;">
-        <div class="row align-items-end px-2">
-          <a href="#" onclick="añadirColumna()" class="btn btn-light h-50">Añadir columna</a>
-        </div>
+      <div id="lastCol" class="col-6 me-3 contenido" style="width: 18em;">
+          <button class="boton-col" name="button" onclick="añadirColumna()">Agregar columna</button>
       </div>
     </div>
   </div>
