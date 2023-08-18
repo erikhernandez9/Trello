@@ -37,7 +37,7 @@
       <div class="col-6 me-3 px-3 py-3 rounded-4 contenido fondo-col" style="width: 18em;">
         <input type="text" class="sinborde h5 text-light" value="Inserte titulo">
         <div id="div-0" class="row justify-content-center px-2">
-          <div class="card bg-dark text-light mb-2 px-0 redondeado">
+          <div class="card bg-dark text-light mb-2 px-0 redondeado" onclick="console.log(`dsvdd`)">
             <div class="etiqueta"></div>
             <div class="card-body">
               <textarea class="sinborde-textarea" placeholder="Escribe algo..." oninput="adjustTextareaHeight(this)"></textarea>
@@ -50,8 +50,10 @@
           </svg> Añada una tarjeta</button>
         </div>
       </div>
-      <div id="lastCol" class="col-6 me-3 contenido" style="width: 18em;">
-          <button class="boton-col" name="button" onclick="añadirColumna()">Agregar columna</button>
+      <div id="lastCol" class="col-6 me-3 contenido " style="width: 15em;">
+          <button class="boton-col" name="button" onclick="añadirColumna()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+          </svg> Añada otra lista</button>
       </div>
     </div>
   </div>
